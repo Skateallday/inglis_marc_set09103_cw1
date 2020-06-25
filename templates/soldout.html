@@ -1,0 +1,57 @@
+
+{% extends "template.html" %}
+{% block content %}
+
+
+
+      {% for message in get_flashed_messages() %}
+      <div class="alert alert-warning">
+          <button type="button" class="close" data-dismiss="alert">
+            &times;
+          </button>
+          {{ message }}
+      </div>
+      {% endfor %}
+
+<div class="container-fluid sections">
+    <div class="container">
+        <div class="row">
+			<div class="col-lg-12">
+                <p><h2>Sorry that size has sold out</h2></p>
+                <p>See what else we have in stock!</p>
+			</div>
+		</div>
+        <div class="row">
+            <div class="col-lg-4">
+                <img  class="products" src={{url_for('static', filename="images/SKAFtee.jpg")}} alt="OG Logo Tee">
+            </div>
+            <div class="col-lg-4">
+                <h3>Skaters Against Fascism</h3>
+                <h4> Logo Tee</h4>
+                <h5>£22 + £4.00 p&p</h5>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="299H9JNA82LXQ">
+                    <input type="hidden" class="form-control" name="on0" value="sizes">sizes</td></tr><tr><td><select class="form-control" name="os0">
+                        <option value="Small">Small £22.00 GBP</option>
+                        <option value="Medium">Medium £22.00 GBP</option>
+                        <option value="Large">Large £22.00 GBP</option>
+                        <option value="XL">XL £22.00 GBP</option>
+                    </select>
+                    <br>
+                    <input type="hidden" name="currency_code" value="GBP">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+                    
+                
+            </div>
+        </div>
+          
+        
+    </div>
+</div>
+
+
+
+{% endblock %}

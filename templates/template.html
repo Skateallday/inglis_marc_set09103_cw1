@@ -1,9 +1,11 @@
 <html>
 <head> 
-<title>Results</title>
+<title>SKAF - Skaters Against Fascism</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link rel="stylesheet" href="../static/css/styles.css">
 <link rel="stylesheet" href="../static/css/searchbar.css">
+<link rel="stylesheet" href="../static/css/logoFade.css">
+
 <style>
 	.thick-border{margin-left:-50;
 			border: 3px solid black;
@@ -21,50 +23,10 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-        <a class="navbar-brand" href={{ url_for ('home')}}>Tricktionary</a>
+        <a class="navbar-brand" href={{ url_for ('home')}}>SKAF</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href={{url_for('home')}} id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Category
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href={{url_for('lists', stat="skaters")}}>Skaters</a>
-                  <a class="dropdown-item" href={{url_for('lists', stat="skateboards")}} >Skateboards</a>
-                  <a class="dropdown-item" href={{url_for('lists', stat="shoes")}} >Shoes</a>
-                  <a class="dropdown-item" href={{url_for('lists', stat="trucks")}} >Trucks</a>
-                  <a class="dropdown-item" href={{url_for('lists', stat="wheels")}} >Wheels</a>
-                </div>
-              </li>
-              <a class="nav-link" href={{ url_for('contact')}}>Contact</a>
-            </li>
-          
-          </ul>
-          
-          {% if loggedIn == 'yes' %}
-            <ul class="navbar-nav mr-auto">
-              <li><a class="btn btn-outline-success" role="button" aria-pressed="true" href={{url_for('profile')}}>{{ username }}
-              </a>
-              </li>
-              <li><a class="btn btn-outline-danger" role="button" aria-pressed="true" href={{url_for('logout')}}>Logout</a>
-              </li>
-            </ul>
-          {% else %}
-          <ul class="navbar-nav mr-auto">
-            <li><a class="btn btn-outline-info" role="button" aria-pressed="true" href={{url_for('LogIn')}}>Log in</a>
-            </li>
-            <li><a class="btn btn-outline-warning" role="button" aria-pressed="true" href={{url_for('SignUp')}}>Sign Up</a>
-            </li>
-          </ul>
-          {% endif %}
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
           </form>
         </div>
 </nav>
@@ -76,8 +38,8 @@
     <div class="containerfluid">
         <div class="row">
             <div class="col-sm-12">
-                <h5>Created Using Python Flask</h5>
-                <p>Design by Jamfish</p>
+              <h5>Design by Jamfish</h5>  
+              <p>Created Using Python Flask</p>
             </div>
         </div>
     </div>

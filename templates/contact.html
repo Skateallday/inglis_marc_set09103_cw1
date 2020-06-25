@@ -13,31 +13,41 @@
 		  <div class="col-lg-8">
 			 <div class="form-group">
 				<form method="POST"  enctype="multipart/form-data">
-				   {{ form.hidden_tag() }} {{ form.csrf_token() }}
-				   <label for="skaterName">Group Name</label>
-				   {% if request.method == 'POST' %} {% for error in form.skaterName.errors %}
-				   <span class="errors">[{{ error }}]</span> {% endfor %} {% endif %} {{ form.skaterName(class="form-control") }}
-				   <label for="skaterAge">Group Details</label>
-				   {% if request.method == 'POST' %} {% for error in form.skaterAge.errors %}
-				   <span class="errors">[{{ error }}]</span> {% endfor %} {% endif %} {{ form.skaterAge(class="form-control") }}
-				   <label for="skaterSex">Group Type</label>
-				   {% if request.method == 'POST' %} {% for error in form.skaterSex.errors %}
-				   <span class="errors">[{{ error }}]</span> {% endfor %} {% endif %} {{ form.skaterSex(class="form-control") }}
-				   <label for="skateboardSponsor">Group Name</label>
-				   {% if request.method == 'POST' %} {% for error in form.skateboardSponsor.errors %}
-				   <span class="errors">[{{ error }}]</span> {% endfor %} {% endif %} {{ form.skateboardSponsor(class="form-control") }}
-				   <label for="shoeSponsor">Group Details</label>
-				   {% if request.method == 'POST' %} {% for error in form.shoeSponsor.errors %}
-				   <span class="errors">[{{ error }}]</span> {% endfor %} {% endif %} {{ form.shoeSponsor(class="form-control") }}
-				   <label for="truckSponsor">Group Type</label>
-				   {% if request.method == 'POST' %} {% for error in form.truckSponsor.errors %}
-				   <span class="errors">[{{ error }}]</span> {% endfor %} {% endif %} {{ form.truckSponsor(class="form-control") }}
-				   <label for="wheelSponsor">Wheel Sponsor</label>
-				   {% if request.method == 'POST' %} {% for error in form.wheelSponsor.errors %}
-				   <span class="errors">[{{ error }}]</span> {% endfor %} {% endif %} {{ form.wheelSponsor(class="form-control")}}
-				   <p></p>
-				   {{ form.submit(class="btn btn-info") }}
-				</form>
+                    {{ form.hidden_tag() }} {{ form.csrf_token() }}
+                    <label for="skaterName">Skater Name</label>
+                    {% if request.method == 'POST' %} {% for error in form.name.errors %}
+                    <span class="errors">[{{ error }}]</span> {% endfor %} {% endif %} {{ form.name(class="form-control") }}
+
+                    <label for="skaterAge">DOB</label>
+                    {% if request.method == 'POST' %} {% for error in form.DOB.errors %}
+                    <span class="errors">[{{ error }}]</span> {% endfor %} {% endif %} {{ form.DOB(class="form-control") }}
+
+                    <label for="nationality">Nationality</label>
+                    {% if request.method == 'POST' %} {% for error in form.nationality.errors %}
+                    <span class="errors">[{{ error }}]</span> {% endfor %} {% endif %} {{ form.nationality(class="form-control") }}
+
+                    <label for="skaterSex">Gender</label>
+                    {% if request.method == 'POST' %} {% for error in form.gender.errors %}
+                    <span class="errors">[{{ error }}]</span> {% endfor %} {% endif %} {{ form.gender(class="form-control") }}
+
+                    <label for="skateboard">Skateboard Company</label>
+                    {% if request.method == 'POST' %} {% for error in form.skateboard.errors %}
+                    <span class="errors">[{{ error }}]</span> {% endfor %} {% endif %} {{ form.skateboard(class="form-control") }}
+
+                    <label for="wheelSponsor">Wheel Sponsor</label>
+                    {% if request.method == 'POST' %} {% for error in form.wheels.errors %}
+                    <span class="errors">[{{ error }}]</span> {% endfor %} {% endif %} {{ form.wheels(class="form-control")}}
+
+                    <label for="shoeSponsor">Shoe Sponsor</label>
+                    {% if request.method == 'POST' %} {% for error in form.shoes.errors %}
+                    <span class="errors">[{{ error }}]</span> {% endfor %} {% endif %} {{ form.shoes(class="form-control") }}
+
+                    <label for="trucks">Truck Sponsor</label>
+                    {% if request.method == 'POST' %} {% for error in form.trucks.errors %}
+                    <span class="errors">[{{ error }}]</span> {% endfor %} {% endif %} {{ form.trucks(class="form-control") }}
+                    <p></p>
+                    {{ form.submit(class="btn btn-info") }}
+                 </form>
 			 </div>
 		  </div>
 	   </div>
